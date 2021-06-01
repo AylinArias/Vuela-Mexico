@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vuela México</title>
+    <link rel="shorcut icon" href="imagenes/icono.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/fancybox.min.css">
+    
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+    <header class="site-header js-site-header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-6 col-lg-4 site-logo" data-aos="fade"><a href="index.html">Vuela México</a></div>
+          <div class="col-6 col-lg-8">
+
+
+            <div class="site-menu-toggle js-site-menu-toggle"  data-aos="fade">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+
+            <div class="site-navbar js-site-navbar">
+              <nav role="navigation">
+                <div class="container">
+                  <div class="row full-height align-items-center">
+                    <div class="col-md-6 mx-auto">
+                      <ul class="list-unstyled menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pueblos.html">Pueblos Magicos</a></li>
+                        <li><a href="acerca.html">Acerca de...</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li class="active"><a href="reservacion.html">Reservacion</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="site-hero inner-page overlay" style="background-image: url(imagenes/P2.jpg)" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row site-hero-inner justify-content-center align-items-center">
+          <div class="col-md-10 text-center" data-aos="fade">
+            <h1 class="heading mb-3">Reservacion</h1>
+            <ul class="custom-breadcrumbs mb-4">
+              <li><a href="index.html">Inicio</a></li>
+              <li>&bullet;</li>
+              <li>Reservacion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <a class="mouse smoothscroll" href="#next">
+        <div class="mouse-icon">
+          <span class="mouse-wheel"></span>
+        </div>
+      </a>
+    </section>
+   
+
+    <section class="section contact-section" id="next">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            
+            <form action="guardarDatos.php" method="post" class="bg-white p-md-5 p-4 mb-5 border" onsubmit="return validar();">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label class="text-black font-weight-bold" for="name">Nombre</label>
+                  <input type="text" id="name" class="form-control" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="text-black font-weight-bold" for="phone">Telefono</label>
+                  <input type="text" id="phone" class="form-control" placeholder="Ej: 8717321111" required min="10">
+                </div>
+              </div>
+          
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label class="text-black font-weight-bold" for="email">Correo</label>
+                  <input type="email" id="email" class="form-control" placeholder="ejemplo@gmail.com" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="destination" class="font-weight-bold text-black">Destino</label>
+                  <div class="field-icon-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="" id="destination" class="form-control">
+                      <option value="">Santiago Nuevo Leon</option>
+                      <option value="">Cholula Puebla</option>
+                      <option value="">Tequila Jalisco</option>
+                      <option value="">Bernal Queretaro</option>
+                      <option value="">San Cristobal Chiapas</option>
+                      <option value="">Todos Santos Baja</option>
+                      <option value="">Arteaga Coahuila</option>
+                      <option value="">Mazamitla Jalisco</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label class="text-black font-weight-bold" for="checkin_date">Fecha de Salida</label>
+                  <input type="text" id="checkin_date" class="form-control" required>
+                </div>
+                <div class="col-md-6 form-group">
+                  <label class="text-black font-weight-bold" for="checkout_date">Fecha de Regreso</label>
+                  <input type="text" id="checkout_date" class="form-control" required>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="adults" class="font-weight-bold text-black">Adultos</label>
+                  <div class="field-icon-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="" id="adults" class="form-control">
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4+</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-md-6 form-group">
+                  <label for="children" class="font-weight-bold text-black">Niños</label>
+                  <div class="field-icon-wrap">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="" id="children" class="form-control">
+                      <option value="">0</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4+</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <div class="row mb-4">
+                <div class="col-md-12 form-group">
+                    <label class="text-black font-weight-bold" for="numtarjeta">Número de tarjeta</label>
+                    <input type="text" id="numtarjeta" class="form-control" placeholder="Ingresa el número de tarjeta" required min="18">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="text-black font-weight-bold" for="cvv">CVV</label>
+                    <input type="text" id="cvv" class="form-control" placeholder="cvv" required min="4">
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <img src="imagenes/visa.png" class="img-rounded" />
+                    <img src="imagenes/master.png" class="img-rounded" />
+                    <img src="imagenes/paypal.png" class="img-rounded" />
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" value="Reservar ahora" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
+                </div>
+                <div class="col-md-6 form-group">
+                    <input type="submit" value="Imprimir Boleto" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
+                  </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="row">
+              <div class="col-md-10 ml-auto contact-info">
+                <p><span class="d-block">Elegir asientos:</span></p>
+                <div class="gtco-section border-bottom">
+                    <div class="gtco-container">
+                        <div class="row">
+                    <body>
+                    
+                    <center>
+            
+                   <script type="text/javascript">
+            
+            
+                        numeroasientosseleccionados = 0;
+                        numeroasientosporfila = 6;
+            
+            
+                        nombresdelasfilas = ['A','B','C','D','E','F','G','H','I','J'];
+            
+                        var statusPics = new Array();
+            
+                        statusPics['libre'] = new Image();
+            
+                        statusPics['seleccionado'] = new Image();
+            
+                        statusPics['ocupado'] = new Image();
+
+                        statusPics['libre'].src = 'imagenes/asiento.png';
+                        statusPics['seleccionado'].src = 'imagenes/asientoSelec.png';
+                        statusPics['ocupado'].src = 'imagenes/asientoOcup.png';
+            
+                        function crearasientos(asientos,asientosfila,nombrefilas){
+            
+                            for(i=0; i < nombrefilas.length; i++){
+            
+            
+                                var filas = document.createElement('tr');
+                                var columnas = document.createElement('td');
+            
+                                columnas.innerHTML = nombrefilas[i];
+            
+                                filas.appendChild(columnas);
+            
+                                for(j=0; j < asientosfila; j++){
+            
+                                    columnas = document.createElement('td');
+            
+                                    var imagenbutaca = document.createElement('img');
+            
+                                    imagenbutaca.src = statusPics['libre'].src;
+            
+                                    imagenbutaca.status = 'libre';
+            
+                                    imagenbutaca.onclick=function(){
+            
+                                        this.status = (this.status == 'libre')? 'seleccionado' : 'libre';
+            
+                                        this.src = (this.status == 'libre')? statusPics['libre'].src : statusPics['seleccionado'].src;    
+                                    }
+        
+                                    columnas.appendChild(imagenbutaca);
+            
+                                    filas.appendChild(columnas);
+                                }
+                                asientos.appendChild(filas);
+                            }
+                        }
+                        function confirmarsitios(){
+ 
+                            for(i=0; i < butacas.length; i++){
+            
+                                if(butacas[i].status == 'seleccionado'){
+            
+                                    ++numeroasientosseleccionados;
+            
+                                    butacas[i].src=statusPics['ocupado'].src
+                                }
+                            }
+                        }
+            
+                        window.onload=function(){
+            
+                            butacascrear = document.getElementById('crear');
+            
+                            butacas = butacascrear.getElementsByTagName('img');
+            
+                            crearasientos(butacascrear,numeroasientosporfila,nombresdelasfilas);
+            
+                            document.getElementById('confirmar').onclick=confirmarsitios;
+            
+                            document.getElementById('resetear').onclick=function(){
+            
+                                for(i=0; i < butacas.length; i++){
+            
+                                    butacas[i].src = statusPics['libre'].src;
+            
+                                    butacas[i].status = 'libre';
+            
+                                }
+            
+                            }
+            
+                        }
+            
+                    </script>
+            
+                </head>
+                <body>
+            
+                    <div id="header"></div>
+            
+                    <div id="wrapper">
+                        <div id="myTickets">
+                            <div id="myTicket">
+                            </div>
+                        </div>
+                        <div id="seating">
+                            <table id="crear"></table>
+                            <div style="clear:both">
+                            </div>
+                            <br/>
+                            <div class="form-group">
+                            <div id="theButtons">
+                                <input type="button" value="Confirmar Asientos"  id="confirmar" onclick="confirmarsitios" class="btn btn-primary text-white py-3 px-5 font-weight-bold">  
+                            </div>
+                        </div>
+                            <div class="form-group">
+                            <div id="theButtons">
+                                <input type="reset" id="resetear" value="Borrar seleccion"  class="btn btn-primary text-white py-3 px-5 font-weight-bold"> 
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </center>
+                    </div>
+                    </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="section footer-section">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-md-3 mb-5">
+              <ul class="list-unstyled link">
+                <li><a href="#">Acerca de...</a></li>
+                <li><a href="#">Terminos &amp; Condiciones</a></li>
+                <li><a href="#">Politica de Privacidad</a></li>
+               <li><a href="#">Pueblos Magicos</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-5 pr-md-5 contact-info">
+              <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Dirección:</span> <span> Blvd. Revolución y, Av. Instituto Tecnologico de la Laguna <br> s/n, Primero de Cobian</span></p>
+              <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Telefono:</span> <span> 87-17-32-11-11</span></p>
+              <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span> <span> info@ITL_Laguna.com</span></p>
+            </div>
+            <div class="col-md-3 mb-5">
+              <p>Suscribete</p>
+              <form action="#" class="footer-newsletter">
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email...">
+                  <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="row pt-5">
+            <p class="col-md-6 text-lefth social">
+              <a href="#"><span class="fa fa-tripadvisor"></span></a>
+              <a href="#"><span class="fa fa-facebook"></span></a>
+              <a href="#"><span class="fa fa-twitter"></span></a>
+              <a href="#"><span class="fa fa-linkedin"></span></a>
+              <a href="#"><span class="fa fa-vimeo"></span></a>
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <script type= "text/javascript">
+        function validarTarjetas(){
+
+            visa = document.getElementById("visa").value;
+            cv = document.getElementById("cv").value;
+
+            var visa_error = "";
+            var color = "blue";
+
+            if(!visa.match(/^2\d{5}$/) || cv <= 1000 || cv >= 10000){
+                 visa_error = "Datos de tarjeta invalidos";
+                 color = "orange";
+            }else{
+                visa_error = "Compra realizada";
+                color = "blue";
+            }
+            document.getElementById("visa_error").innerHTML = visa_error.fontcolor(color);
+        }
+
+        function validarEmail(){
+            const email = document.getElementById("email").value;
+            
+            if(!(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email))){
+                return false;
+            }
+
+        }
+
+        function validarTelefono(telefono){
+          if(telefono.value!==''){
+            var data = telefono.value;
+            if(isNaN(data)){
+              return false;
+            }
+          }
+        }
+
+
+        function validarAdultos(){
+             adultos = document.getElementById("adultos").selectedIndex;
+             if(adultos == null || adultos == 0){
+                 return false;
+             }
+
+             <select name="" id="adults" >
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4+</option>
+                    </select>
+        }
+
+        function validarNiños(){
+             niños = document.getElementById("niños").selectedIndex;
+             if(niños == null || niños == 0){
+                 return false;
+             }
+
+             <select name="" id="children" >
+                      <option value="">0</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4+</option>
+                    </select>
+        }
+
+        function validar(){
+                var datosCorrectos=true;
+                var error="";
+                if(document.getElementById("name").value==""){
+                    datosCorrectos=false;
+                    error="\n El Nombre Esta Vacio";
+                }
+                return datosCorrectos;
+
+    </script>
+      
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/jquery.fancybox.min.js"></script>
+      
+      
+      <script src="js/aos.js"></script>
+      
+      <script src="js/bootstrap-datepicker.js"></script> 
+      <script src="js/jquery.timepicker.min.js"></script> 
+    
+      
+    
+      <script src="js/main.js"></script>
+    </body>
+    </html>
